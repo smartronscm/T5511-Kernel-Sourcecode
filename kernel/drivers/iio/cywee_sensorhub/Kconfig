@@ -1,0 +1,15 @@
+#
+# IIO sensor hub drivers configuration
+#
+menu "CYWEE_SENSORHUB"
+
+config CYWEE_SENSORHUB_CORE
+	depends on I2C && IIO
+	select IIO_BUFFER
+	select IIO_TRIGGERED_BUFFER
+	tristate "Cywee sensor hub"
+	help
+	  The Cywee sensor hub is to control the sensors in a power-saving mode
+	  Say Y here to enable the feature.
+
+endmenu
